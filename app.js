@@ -6,7 +6,7 @@ const app = express();
 let airports = [];
 
 // Carregar o arquivo CSV de aeroportos
-fs.createReadStream('/airports-api/airports.csv')  // Certifique-se de que o arquivo CSV está no mesmo diretório
+fs.createReadStream('airports.csv')  // Certifique-se de que o arquivo CSV está no mesmo diretório
   .pipe(csvParser())
   .on('data', (row) => {
     airports.push(row); // Adiciona cada linha do CSV ao array de aeroportos
